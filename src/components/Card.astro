@@ -3,13 +3,13 @@ interface Props {
 	title: string;
 	description: string;
 	url: string;
+	showInBlank?: boolean;
 }
 
-const { title, description, url } = Astro.props;
+const { title, description, url, showInBlank = false } = Astro.props;
 ---
 	<div class="h-96 max-w-72 hover:bg-black/20 hover:rounded-md p-2">
-		<a href={url}>
-			<!--<img src="../../public/sentext.png" alt="Sentext" class="max-w-28"/>-->
+		<a href={url} target={showInBlank ? "_blank" : "_self"}>
 			<div class="h-2/4 bg-blue rounded-md"></div>
 			<div class="pt-2">
 				<h2 class="text-2xl text-bold">{title}</h2>
