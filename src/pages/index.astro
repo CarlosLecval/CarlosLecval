@@ -30,7 +30,7 @@ const projects = await Astro.glob("./*.md");
 	<div id="projects" class="flex justify-center">
 		<div class="w-2/4 flex justify-between flex-wrap pt-9 gap-5">
 			{
-				projects.map((project) => <Card title={project.frontmatter.title} description={project.frontmatter.description} url={project.url}/>)
+				projects.map((project) => <Card title={project.frontmatter.title} description={project.frontmatter.description} url={project.url ?? "/"}/>)
 			}
 		</div>
 	</div>
