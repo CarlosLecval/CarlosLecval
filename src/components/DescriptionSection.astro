@@ -15,8 +15,10 @@ const { jobTitle, time, companyName, description } = Astro.props;
 		<p>{jobTitle}</p>
 		<p>{time}</p>
 	</div>
-	<div class="font-light pt-2">
-		<p>{companyName}</p>
-		<p>{description}</p>
+	<div class="pt-2">
+		<p class="text-xl">{companyName}</p>
+		<div class="text-textgray pl-5">
+			<slot />
+		</div>
 	</div>
 </div>
