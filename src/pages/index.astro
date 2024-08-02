@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import Card from '../components/Card.astro';
+import TitleSection from '../components/TitleSection.astro';
+import DescriptionSection from '../components/DescriptionSection.astro';
+
+const projects = await Astro.glob("./*.md");
+---
+
+<Layout title="Carlos Lecona">
+	<div id="about" class="min-w-screen min-h-screen bg-gradient-to-b from-blue from-13% to-offwhite to-63% flex justify-center items-center flex-col">
+		<div class="w-2/4">
+			<h1 class="text-9xl text-center">Hi, I'm Carlos</h1>
+			<p class="text-base font-extralight text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
+		</div>
+		<!--<div class="flex flex-row justify-around pt-9">
+			<img class="" src="../../public/cloud3.svg" alt="">
+			<img class="" src="../../public/cloud.svg" alt="">
+		</div>
+		<div class="flex flex-col justify-center items-center">
+			<img class="" src="../../public/cloud2.svg" alt="">
+		</div>
+		<div class="justify-self-center">
+			<p>Hi, I'm Carlos</p>
+		</div>
+		div class="bg-mountain bg-no-repeat aspect-video bg-cover bg-center absolute bottom-0"></div>-->
+	</div>
+	<!--<div id="projects" class="min-w-screen min-h-screen bg-gradient-to-b from-green from-5% to-offwhite to-17% flex justify-center">-->
+	<div id="projects" class="flex justify-center">
+		<div class="w-2/4 flex justify-between flex-wrap pt-9 gap-5">
+			{
+				projects.map((project) => <Card title={project.frontmatter.title} description={project.frontmatter.description} url={project.url}/>)
+			}
+		</div>
+	</div>
+	<div class="flex flex-col items-center pt-5 pb-32">
+		<div id="experience" class="w-2/4 flex flex-col">
+			<TitleSection title="💼 Experience" />
+			<DescriptionSection jobTitle="Frontend" time="2024" companyName="Company name" description="LoremIpsum"/>
+			<DescriptionSection jobTitle="Frontend" time="2024" companyName="Company name" description="LoremIpsum"/>
+			<DescriptionSection jobTitle="Frontend" time="2024" companyName="Company name" description="LoremIpsum"/>
+		</div>
+		<div id="education" class="w-2/4 flex flex-col pt-3">
+			<TitleSection title="🎓 Education" />
+			<DescriptionSection jobTitle="Frontend" time="2024" companyName="Company name" description="LoremIpsum"/>
+			<DescriptionSection jobTitle="Frontend" time="2024" companyName="Company name" description="LoremIpsum"/>
+		</div>
+	</div>
+	<Footer />
+</Layout>
+
