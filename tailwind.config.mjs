@@ -12,7 +12,8 @@ export default {
 			'darkorange': "#D26833",
 			'black': "#000000",
 			'white': "#FFFFFF",
-			'textgray': "#374151"
+			'textgray': "#374151",
+			'gray': "#D9D9D9"
 		},
 		extend: {
 			fontFamily: {

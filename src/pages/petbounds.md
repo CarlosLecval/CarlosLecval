@@ -3,8 +3,8 @@ layout: "../layouts/BlogLayout.astro"
 title: Petbounds
 description: Adoption platform for street dogs where users can adopt dogs from certified shelters.
 image:
-  url: "https://docs.astro.build/assets/rose.webp"
-  alt: "The Astro logo on a dark background with a pink glow."
+  url: "/CarlosLecval/petboundsmockup.png"
+  alt: "petbounds"
 github: "https://github.com/CarlosLecval/Petbounds"
 ---
 

@@ -3,8 +3,8 @@ layout: "../layouts/BlogLayout.astro"
 title: Tocinitobot
 description: Yet another discord music bot written in js
 image:
-  url: "https://docs.astro.build/assets/rose.webp"
-  alt: "The Astro logo on a dark background with a pink glow."
+  url: "/CarlosLecval/tocinitomockup.png"
+  alt: "Tocinitobot"
 github: "https://github.com/CarlosLecval/TocinitoBot"
 ---
 

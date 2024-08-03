@@ -4,6 +4,7 @@ import Footer from '../components/Footer.astro';
 import Card from '../components/Card.astro';
 import TitleSection from '../components/TitleSection.astro';
 import DescriptionSection from '../components/DescriptionSection.astro';
+import ContactCard from '../components/ContactCard.astro';
 
 const projects = await Astro.glob("./*.md");
 ---
@@ -11,8 +12,8 @@ const projects = await Astro.glob("./*.md");
 <Layout title="Carlos Lecona">
 	<div id="about" class="min-w-screen min-h-screen bg-gradient-to-b from-blue from-13% to-offwhite to-63% flex justify-center items-center flex-col">
 		<div class="w-2/4">
-			<h1 class="text-9xl text-center">Hi, I'm Carlos</h1>
-			<p class="text-base font-extralight text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
+			<h1 class="text-9xl text-center">Hey, I'm Carlos</h1>
+			<p class="text-base font-extralight text-center pt-3">Currently a Data Intelligence and Cybersecurity Engineering student searching for an SWE internship. Trying to build cool projects that enhance everyday experiences</p>
 		</div>
 		<!--<div class="flex flex-row justify-around pt-9">
 			<img class="" src="../../public/cloud3.svg" alt="">
@@ -30,9 +31,19 @@ const projects = await Astro.glob("./*.md");
 	<div id="projects" class="flex justify-center">
 		<div class="w-2/4 flex justify-between flex-wrap pt-9 gap-5">
 			{
-				projects.map((project) => <Card title={project.frontmatter.title} description={project.frontmatter.description} url={project.url ?? "/"}/>)
+				projects.map((project) => <Card 
+					title={project.frontmatter.title} 
+					description={project.frontmatter.description} 
+					url={project.url ?? "/"} 
+					image={project.frontmatter.image.url ?? ""}
+				/>)
 			}
-			<Card title="Grooving.app" description="PLAY MUSIC WITH FRIENDS LIKE NEVER BEFORE" url="https://grooving.app/" showInBlank={true} />
+			<Card 
+				title="GROOVING.app" 
+				description="PLAY MUSIC WITH FRIENDS LIKE NEVER BEFORE" 
+				url="https://grooving.app/" 
+				showInBlank={true} 
+				image="/CarlosLecval/groovingmockup.png"/>
 		</div>
 	</div>
 	<div class="flex flex-col items-center pt-5 pb-32">
@@ -65,5 +76,15 @@ const projects = await Astro.glob("./*.md");
 		</div>
 	</div>
 	<Footer />
+	<ContactCard />
+	<script>
+    document.querySelector('#closeContact')!.addEventListener('click', () => {
+			document.querySelector<HTMLElement>('#contact')!.style.display = 'none';
+    });
+
+    document.querySelector('#openContact')!.addEventListener('click', () => {
+			document.querySelector<HTMLElement>('#contact')!.style.display = 'flex';
+    });
+  </script>
 </Layout>
 

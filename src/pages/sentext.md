@@ -3,8 +3,8 @@ layout: "../layouts/BlogLayout.astro"
 title: Sentext
 description: Chrome extension leveraging Natural Language Processing (NLP) for sentiment analysis of comments on tweets.
 image:
-  url: "https://docs.astro.build/assets/rose.webp"
-  alt: "The Astro logo on a dark background with a pink glow."
+  url: "/CarlosLecval/sentextmockup.png"
+  alt: "Sentext"
 github: "https://github.com/TofuDotTech/sentext"
 ---
 

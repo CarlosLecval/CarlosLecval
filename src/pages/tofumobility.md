@@ -3,8 +3,8 @@ layout: "../layouts/BlogLayout.astro"
 title: TOFU_ MOBILITY
 description: Mobile application for iPhone designed to manage the flow of public transport fleets.
 image:
-  url: "https://docs.astro.build/assets/rose.webp"
-  alt: "The Astro logo on a dark background with a pink glow."
+  url: "/CarlosLecval/tofumobmockup.png"
+  alt: "tofu_ mobility"
 github: "https://github.com/TofuDotTech/tofu_mobility"
 ---
 

@@ -3,8 +3,8 @@ layout: "../layouts/BlogLayout.astro"
 title: Doc Type
 description: Web application designed for the healthcare sector, focusing on providing a list of possible conditions and associated treatments based on patient symptoms.
 image:
-  url: "https://docs.astro.build/assets/rose.webp"
-  alt: "The Astro logo on a dark background with a pink glow."
+  url: "/CarlosLecval/doctypemockup.png"
+  alt: "Doctype"
 github: "https://github.com/TofuDotTech/doctype"
 ---
 
