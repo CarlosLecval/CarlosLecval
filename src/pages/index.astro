@@ -11,9 +11,9 @@ const projects = await Astro.glob("./*.md");
 
 <Layout title="Carlos Lecona">
 	<div id="about" class="min-w-screen min-h-screen bg-gradient-to-b from-blue from-13% to-offwhite to-63% flex justify-center items-center flex-col">
-		<div class="w-2/4">
-			<h1 class="text-9xl text-center">Hey, I'm Carlos</h1>
-			<p class="text-base font-extralight text-center pt-3">Currently a Data Intelligence and Cybersecurity Engineering student searching for an SWE internship. Trying to build cool projects that enhance everyday experiences</p>
+		<div class="w-4/5 xl:w-2/4">
+			<h1 class="text-4xl lg:text-6xl xl:text-9xl text-center">Hey, I'm Carlos</h1>
+			<p class="text-xs md:text-base font-extralight text-center pt-3">Currently a Data Intelligence and Cybersecurity Engineering student searching for an SWE internship. Trying to build cool projects that enhance everyday experiences</p>
 		</div>
 		<!--<div class="flex flex-row justify-around pt-9">
 			<img class="" src="../../public/cloud3.svg" alt="">
@@ -29,7 +29,7 @@ const projects = await Astro.glob("./*.md");
 	</div>
 	<!--<div id="projects" class="min-w-screen min-h-screen bg-gradient-to-b from-green from-5% to-offwhite to-17% flex justify-center">-->
 	<div id="projects" class="flex justify-center">
-		<div class="w-2/4 flex justify-between flex-wrap pt-9 gap-5">
+		<div class="w-4/5 xl:w-2/4 flex justify-between flex-wrap pt-9 gap-5">
 			{
 				projects.map((project) => <Card 
 					title={project.frontmatter.title} 
@@ -47,7 +47,7 @@ const projects = await Astro.glob("./*.md");
 		</div>
 	</div>
 	<div class="flex flex-col items-center pt-5 pb-32">
-		<div id="experience" class="w-2/4 flex flex-col">
+		<div id="experience" class="w-4/5 xl:w-2/4 flex flex-col">
 			<TitleSection title="💼 Experience" />
 			<DescriptionSection jobTitle="Software developer" time="June 2023 - June 2024" companyName="Flow Digital" >
 			<ul class="list-disc">
@@ -69,7 +69,7 @@ const projects = await Astro.glob("./*.md");
 			</ul>
 			</DescriptionSection>
 		</div>
-		<div id="education" class="w-2/4 flex flex-col pt-3">
+		<div id="education" class="w-4/5 xl:w-2/4 flex flex-col pt-3">
 			<TitleSection title="🎓 Education" />
 			<DescriptionSection jobTitle="Data intelligence and Cybersecurity Engineering" time="August 2021 - June 2025" companyName="Universidad Panamericana" />
 			<DescriptionSection jobTitle="Programming technician" time="August 2018 - June 2021" companyName="Instituto Politécnico Nacional" />

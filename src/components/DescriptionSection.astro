@@ -10,13 +10,13 @@ const { jobTitle, time, companyName } = Astro.props;
 
 <hr>
 <div class="flex flex-col p-3">
-	<div class="flex justify-between text-2xl">
+	<div class="md:flex md:justify-between text-md md:text-2xl">
 		<p>{jobTitle}</p>
 		<p>{time}</p>
 	</div>
 	<div class="pt-2">
-		<p class="text-xl">{companyName}</p>
-		<div class="text-textgray pl-5">
+		<p class="text-sm md:text-xl">{companyName}</p>
+		<div class="text-textgray pl-5 text-xs md:text-base">
 			<slot />
 		</div>
 	</div>
